@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-enum TransactionType{
-    case income;
-    case expense;
+enum TransactionType:string{
+    case income='income';
+    case expense='expense';
 }
