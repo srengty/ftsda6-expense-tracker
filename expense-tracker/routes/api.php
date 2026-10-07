@@ -12,4 +12,5 @@ Route::get('/user', function (Request $request) {
 // Route::get('/categories', function(){
 //     return Category::all();
 // });
-Route::get('/categories', [CategoryController::class, 'index']);
+// Route::get('/categories', [CategoryController::class, 'index']);
+Route::resource('/categories',CategoryController::class);
