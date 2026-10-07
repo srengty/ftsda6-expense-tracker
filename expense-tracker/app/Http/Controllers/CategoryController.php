@@ -27,7 +27,7 @@ class CategoryController extends Controller
             'icon'=>'nullable|image',
             'type'=>[Rule::enum(TransactionType::class)]
         ]);
-        $validated['icon'] = $request->icon->store('uploaded_images');
+        $validated['icon'] = $request->icon->store('uploaded_images','public');
         $newCategory = Category::create($validated);
         return $newCategory;
     }
